@@ -25,26 +25,51 @@ Crear un programa que permita realizar la soperaciones basicas +, -, *, /
 utilizando un funciones para cada funcion y un menu principal para desplegar 
 y elegir que operacion reutilizaremos """
 
-def funcionSumar():
-    print ("1.sumar")
+import os
 
-def main():
-    funcionSumar()
+def funcionSumar():
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo número: "))
+    print("Resultado:", a + b)
 
 def funcionRestar():
-    print ("2.restar")
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo número: "))
+    print("Resultado:", a - b)
 
 def funcionMultiplicar():
-    print ("3.multiplicar")
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo número: "))
+    print("Resultado:", a * b)
 
 def funcionDividir():
-    print ("4.dividir")
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo número: "))
+    
+    if b != 0:
+        print("Resultado:", a / b)
+    else:
+        print("No se puede dividir entre cero")
 
-    def main():
+def main():
+    print("MENU")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == "1":
         funcionSumar()
+    elif opcion == "2":
         funcionRestar()
+    elif opcion == "3":
         funcionMultiplicar()
+    elif opcion == "4":
         funcionDividir()
+    else:
+        print("Opción no válida")
 
 if __name__ == "__main__":
-    main( )
+    main()

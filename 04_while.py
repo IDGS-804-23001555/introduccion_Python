@@ -13,11 +13,19 @@ a=3
 b=4
 salida: 3+3+3+3+12"""
 
-x=3
-b=4
+a = 3
+b = 4
 
-resultado = 0 
-while b >0 :
-    resultado =resultado+str(x)+"+"
-    b=b-1
-print(resultado)
+resultado = 0
+i = 0
+
+while i < b:
+    resultado = resultado + a
+    print(a, end="")
+    
+    if i < b - 1:
+        print("+", end="")
+    
+    i = i + 1
+
+print("=", resultado)
